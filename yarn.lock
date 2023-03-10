@@ -1737,6 +1737,13 @@
   dependencies:
     "@mantine/utils" "6.0.0"
 
+"@mantine/ds@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@mantine/ds/-/ds-6.0.1.tgz#f90550d1e5905915e3b22def344871cc7736b6c7"
+  integrity sha512-HwjDL96Kv8TUC3V/FzKtU0F53BbdlC6QK5qjbDnoqgU06O7pchCNJd3ZwDT5KS06lLa+qSoL/crFLM1dvUsiGQ==
+  dependencies:
+    "@mantine/utils" "6.0.1"
+
 "@mantine/form@^6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@mantine/form/-/form-6.0.1.tgz#a70d737add9d7e0e7e47161a93efb53f8f86673c"
@@ -1749,6 +1756,13 @@
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-6.0.0.tgz#08b67946e0b45f67181efa9e37df68f92a8ee6d1"
   integrity sha512-boszkajLaA4qvd/ebDhqZBbMuUXlvJv8EM0jTaXz09IaGPachBKG5WKpXEcwWh2qmrUQL6pyhIbLMgPnvwS0QQ==
+
+"@mantine/modals@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@mantine/modals/-/modals-6.0.1.tgz#23d5cd2d1ce01fbe4ec19bb4246dab769d103656"
+  integrity sha512-uMtGDI3sPygQV5VOLIuNa8Y7gmylZN82BAWy8KoCduVn5Fbby/t6ILz7OVJEp8Ob+IL9CZZYvQRtnHQ0zLjq8g==
+  dependencies:
+    "@mantine/utils" "6.0.1"
 
 "@mantine/next@6.0.0":
   version "6.0.0"
@@ -1765,6 +1779,13 @@
   dependencies:
     "@mantine/utils" "6.0.1"
     react-transition-group "4.4.2"
+
+"@mantine/nprogress@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@mantine/nprogress/-/nprogress-6.0.1.tgz#5f0921bd354a1d6af0395208dd2832144edb19c9"
+  integrity sha512-LXFVxhLEpZwB8uUWAeenxbtCyeU8ZgWAmMLJjXgHQ9I/flkxrDmNXAbcNzvNjjFXANZRIl2h3Heb6ZXYOEbZyw==
+  dependencies:
+    "@mantine/utils" "6.0.1"
 
 "@mantine/prism@6.0.0":
   version "6.0.0"
@@ -7405,6 +7426,11 @@ interpret@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-2.2.0.tgz#1a78a0b5965c40a5416d007ad6f50ad27c417df9"
   integrity sha512-Ju0Bz/cEia55xDwUWEa8+olFpCiQoypjnQySseKtmjNrnps3P+xfpUmGr90T7yjlVJmOtybRvPXhKMbHr+fWnw==
+
+intl@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/intl/-/intl-1.2.5.tgz#82244a2190c4e419f8371f5aa34daa3420e2abde"
+  integrity sha512-rK0KcPHeBFBcqsErKSpvZnrOmWOj+EmDkyJ57e90YWaQNqbcivcqmKDlHEeNprDWOsKzPsh1BfSpPQdDvclHVw==
 
 invariant@^2.2.4:
   version "2.2.4"

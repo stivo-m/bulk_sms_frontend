@@ -2,14 +2,14 @@ import axiosClient from 'axios';
 
 let token = null;
 if (typeof window !== 'undefined') {
-  localStorage.getItem('token');
+  token = sessionStorage.getItem('token');
 }
 
 /**
  * Creates an initial 'axios' instance with custom settings.
  */
 const axios = axiosClient.create({
-  baseURL: 'http://localhost:4040/',
+  baseURL: process.env.NEXT_PUBLIC_SERVER_URL!,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json; charset=utf-8',
@@ -23,8 +23,8 @@ const axios = axiosClient.create({
  */
 axios.interceptors.response.use(
   (res) => {
-    if (res.data.contains('token')) {
-      localStorage.setItem('token', res.data.token);
+    if ('token' in res.data.data) {
+      sessionStorage.setItem('token', res.data.data.token);
     }
     return res.data;
   },

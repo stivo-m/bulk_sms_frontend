@@ -1,9 +1,11 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { authReducer } from './features/auth';
+import { contactGroupReducer } from './features/contact_groups';
 
 export const store = configureStore({
   reducer: {
     authState: authReducer,
+    contactGroupState: contactGroupReducer,
   },
 });
 

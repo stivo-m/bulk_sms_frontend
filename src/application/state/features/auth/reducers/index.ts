@@ -1,9 +1,10 @@
 import { createReducer } from '@reduxjs/toolkit';
+import { UserAccount } from '../../../../../../types';
 import { loginUser } from '../actions';
 
 export type AuthState = {
   data: {
-    user: any;
+    user: UserAccount | null;
     token: string | null;
   };
   pending: boolean;

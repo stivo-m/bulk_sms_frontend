@@ -1,5 +1,6 @@
 import { Button, Container, Paper, PasswordInput, TextInput, Title } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { InferType } from 'yup';
 import { authStateSelector, loginUser } from '../src/application/state/features/auth';
@@ -8,9 +9,10 @@ import { showNotification } from '../src/application/utils/notifications';
 import { userLoginValidationSchema } from '../src/core/validations/auth_validations';
 
 export default function HomePage() {
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const {
-    data: { token, user },
+    data: { token },
     pending,
     error,
   } = useAppSelector(authStateSelector);
@@ -33,13 +35,25 @@ export default function HomePage() {
     }
   }, [error]);
 
+  useEffect(() => {
+    if (token !== undefined && token !== null) {
+      showNotification({
+        title: 'Login successful',
+        message: 'We will redirect you to the dashboard shortly...',
+        type: 'success',
+      });
+
+      // navigate the user to the dashboard page
+      router.push('/dashboard');
+    }
+  }, [token]);
+
   return (
     <Container size={420} my={40}>
       <Title align="center">Welcome back!</Title>
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form
           onSubmit={form.onSubmit((values) => {
-            console.log(values);
             dispatch(loginUser(values));
           })}
         >

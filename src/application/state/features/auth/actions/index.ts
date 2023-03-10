@@ -9,7 +9,11 @@ import axios from '../../../../utils/axios';
 export const loginUser = createAsyncThunk(
   'users/login',
   async (input: InferType<typeof userLoginValidationSchema>) => {
-    const response = await axios.post('/users/login', input);
-    return response.data;
+    try {
+      const response = await axios.post('/users/login', input);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 );
